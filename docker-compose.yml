@@ -1,0 +1,36 @@
+services:
+  timescaledb:
+    image: timescale/timescaledb:latest-pg17
+    container_name: aits_timescaledb
+    environment:
+      POSTGRES_USER: aits
+      POSTGRES_PASSWORD: aits_local_dev
+      POSTGRES_DB: aits
+    ports:
+      - "5433:5432"
+    volumes:
+      - aits_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aits -d aits"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: aits_redis
+    ports:
+      - "6380:6379"
+    volumes:
+      - aits_redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  aits_pgdata:
+  aits_redisdata:

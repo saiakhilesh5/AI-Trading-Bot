@@ -1,0 +1,43 @@
+# Deterministic risk controls. The risk engine has FINAL authority over every
+# proposed trade. All percentages are of portfolio equity unless noted.
+risk:
+  max_risk_per_trade_pct: 1.0          # of equity, distance to stop-loss
+  max_daily_loss_pct: 3.0              # halt new trades for the day
+  max_portfolio_drawdown_pct: 12.0     # critical: stop everything, manual restart
+  max_open_positions: 4
+  max_asset_exposure_pct: 25.0         # notional per asset
+  max_group_exposure_pct: 45.0         # correlated group notional
+  max_leverage: 1.0                    # no leverage
+  max_consecutive_losses: 3            # cooldown after streak
+  cooldown_hours: 24
+  max_orders_per_day_per_asset: 3
+  min_stop_distance_atr: 1.5           # stop must be at least 1.5x ATR away
+  min_reward_risk_ratio: 1.5
+  min_take_profit_atr: 2.5
+  max_position_size_pct_equity: 20.0   # notional cap
+
+# Drawdown ladder: at each threshold, exposure trading is restricted further
+drawdown_ladder:
+  - threshold_pct: 4.0
+    action: reduce_risk
+    risk_multiplier: 0.5
+  - threshold_pct: 8.0
+    action: halt_new_trades
+    risk_multiplier: 0.0
+  - threshold_pct: 12.0
+    action: emergency_shutdown
+    risk_multiplier: 0.0
+
+# Correlated exposure groups; actual rolling correlations refine these
+correlation_groups:
+  precious_metals: [XAUUSD, XAGUSD]
+  crypto: [BTCUSD, ETHUSD]
+  correlation_lookback_days: 90
+  # if measured correlation of group < this, treat positions independently
+  correlation_relief_threshold: 0.4
+
+position_sizing:
+  method: volatility_targeted
+  volatility_target_pct: 10.0          # annualized vol target
+  min_notional_usd: 100.0
+  round_to: 2                           # price decimals

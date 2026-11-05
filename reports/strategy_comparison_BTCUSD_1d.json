@@ -1,0 +1,163 @@
+{
+  "asset": "BTCUSD",
+  "interval": "1d",
+  "generated": "2026-11-05T11:06:27.140159+00:00",
+  "n_bars": 1095,
+  "full_sample": {
+    "buy_and_hold": {
+      "total_return": 1.26902,
+      "sharpe": 0.679,
+      "sortino": 1.037,
+      "max_drawdown": 0.5297,
+      "calmar": 0.392,
+      "profit_factor": 1.129,
+      "win_rate": 0.5087,
+      "n_trades": 1094,
+      "transaction_costs": 0.0015
+    },
+    "trend_following": {
+      "total_return": 0.57962,
+      "sharpe": 0.465,
+      "sortino": 0.676,
+      "max_drawdown": 0.5242,
+      "calmar": 0.212,
+      "profit_factor": 1.087,
+      "win_rate": 0.505,
+      "n_trades": 1094,
+      "transaction_costs": 0.0735
+    },
+    "technical_only": {
+      "total_return": -0.70418,
+      "sharpe": -0.753,
+      "sortino": -0.99,
+      "max_drawdown": 0.7186,
+      "calmar": -0.34,
+      "profit_factor": 0.861,
+      "win_rate": 0.3461,
+      "n_trades": 903,
+      "transaction_costs": 0.7275
+    },
+    "forecast_only": {
+      "total_return": 0.0,
+      "sharpe": 0.0,
+      "sortino": 0.0,
+      "max_drawdown": 0.0,
+      "calmar": 0.0,
+      "profit_factor": 0.0,
+      "win_rate": 0.0,
+      "n_trades": 0,
+      "transaction_costs": 0.0
+    },
+    "technical_forecast": {
+      "total_return": 0.0,
+      "sharpe": 0.0,
+      "sortino": 0.0,
+      "max_drawdown": 0.0,
+      "calmar": 0.0,
+      "profit_factor": 0.0,
+      "win_rate": 0.0,
+      "n_trades": 0,
+      "transaction_costs": 0.0
+    },
+    "technical_news": {
+      "total_return": -0.70418,
+      "sharpe": -0.753,
+      "sortino": -0.99,
+      "max_drawdown": 0.7186,
+      "calmar": -0.34,
+      "profit_factor": 0.861,
+      "win_rate": 0.3461,
+      "n_trades": 903,
+      "transaction_costs": 0.7275
+    },
+    "forecast_news_macro": {
+      "total_return": 0.0,
+      "sharpe": 0.0,
+      "sortino": 0.0,
+      "max_drawdown": 0.0,
+      "calmar": 0.0,
+      "profit_factor": 0.0,
+      "win_rate": 0.0,
+      "n_trades": 0,
+      "transaction_costs": 0.0
+    },
+    "full_system": {
+      "total_return": 0.0,
+      "sharpe": 0.0,
+      "sortino": 0.0,
+      "max_drawdown": 0.0,
+      "calmar": 0.0,
+      "profit_factor": 0.0,
+      "win_rate": 0.0,
+      "n_trades": 0,
+      "transaction_costs": 0.0
+    }
+  },
+  "walk_forward": {
+    "buy_and_hold": {
+      "total_return": 0.0476,
+      "sharpe": 0.5586,
+      "max_drawdown": 0.1568,
+      "profit_factor": 1.1876,
+      "win_rate": 0.4974,
+      "n_trades": 59.0
+    },
+    "forecast_news_macro": {
+      "total_return": -0.062,
+      "sharpe": -0.854,
+      "max_drawdown": 0.1929,
+      "profit_factor": 0.9255,
+      "win_rate": 0.4731,
+      "n_trades": 59.0
+    },
+    "forecast_only": {
+      "total_return": -0.062,
+      "sharpe": -0.854,
+      "max_drawdown": 0.1929,
+      "profit_factor": 0.9255,
+      "win_rate": 0.4731,
+      "n_trades": 59.0
+    },
+    "full_system": {
+      "total_return": -0.018,
+      "sharpe": -1.4469,
+      "max_drawdown": 0.0262,
+      "profit_factor": 0.5021,
+      "win_rate": 0.0244,
+      "n_trades": 4.5385
+    },
+    "technical_forecast": {
+      "total_return": -0.0349,
+      "sharpe": -0.94,
+      "max_drawdown": 0.0836,
+      "profit_factor": 0.8556,
+      "win_rate": 0.1269,
+      "n_trades": 21.5385
+    },
+    "technical_news": {
+      "total_return": -0.0229,
+      "sharpe": -0.3359,
+      "max_drawdown": 0.1207,
+      "profit_factor": 0.9802,
+      "win_rate": 0.2859,
+      "n_trades": 40.0
+    },
+    "technical_only": {
+      "total_return": -0.0229,
+      "sharpe": -0.3359,
+      "max_drawdown": 0.1207,
+      "profit_factor": 0.9802,
+      "win_rate": 0.2859,
+      "n_trades": 40.0
+    },
+    "trend_following": {
+      "total_return": 0.0287,
+      "sharpe": 0.2072,
+      "max_drawdown": 0.1567,
+      "profit_factor": 1.1109,
+      "win_rate": 0.491,
+      "n_trades": 59.0
+    }
+  },
+  "note": "Full-sample numbers are illustrative; walk-forward is the valid out-of-sample result. Neither is live performance."
+}

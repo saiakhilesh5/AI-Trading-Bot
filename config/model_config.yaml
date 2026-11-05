@@ -1,0 +1,43 @@
+# Forecasting model benchmark configuration. All models evaluated against baselines.
+horizons: ["1h", "4h", "1d"]
+
+baselines:
+  - random_walk
+  - historical_average
+  - trend_following
+  - volatility_scaled
+
+candidate_models:
+  lightgbm:
+    enabled: true
+  xgboost:
+    enabled: true
+  garch:
+    enabled: true
+  har:
+    enabled: true
+  chronos2:
+    enabled: false   # enabled once torch stack installed (heavyweight)
+    model: "amazon/chronos-2"
+  timesfm:
+    enabled: false
+    model: "google/timesfm-2.0-500m-pytorch"
+  moirai:
+    enabled: false
+  patchtst:
+    enabled: false
+  itransformer:
+    enabled: false
+
+validation:
+  method: walk_forward
+  train_eval_gap_bars: 3      # leakage guard between train and eval windows
+  min_train_bars: 2000
+
+calibration:
+  interval_coverage_targets: [0.5, 0.8, 0.95]
+  min_evaluation_samples: 100
+
+drift:
+  accuracy_window: 100
+  disable_after_consecutive_failures: 5

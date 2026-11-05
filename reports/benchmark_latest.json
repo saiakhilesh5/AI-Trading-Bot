@@ -1,0 +1,104 @@
+{
+  "XAGUSD": {
+    "experiment_id": "exp-d443cd3d437d",
+    "results": [
+      {
+        "model": "baseline_random_walk",
+        "asset_symbol": "XAGUSD",
+        "horizon": "1h",
+        "n_predictions": 300,
+        "directional_accuracy": null,
+        "mae": 0.003027525438555029,
+        "rmse": 0.004150766859742088,
+        "mean_abs_forecast": 0.0,
+        "hit_rate_80_interval": 0.8733333333333333,
+        "diebold_mariano_p": null
+      },
+      {
+        "model": "baseline_historical_average",
+        "asset_symbol": "XAGUSD",
+        "horizon": "1h",
+        "n_predictions": 300,
+        "directional_accuracy": 0.4967,
+        "mae": 0.0030276479780680233,
+        "rmse": 0.004149642724794746,
+        "mean_abs_forecast": 1.8380926949126892e-05,
+        "hit_rate_80_interval": 0.8766666666666667,
+        "diebold_mariano_p": null
+      },
+      {
+        "model": "baseline_trend_following",
+        "asset_symbol": "XAGUSD",
+        "horizon": "1h",
+        "n_predictions": 300,
+        "directional_accuracy": 0.4967,
+        "mae": 0.011997431180309194,
+        "rmse": 0.013130670707342727,
+        "mean_abs_forecast": 0.011947968649327022,
+        "hit_rate_80_interval": 0.8733333333333333,
+        "diebold_mariano_p": null
+      },
+      {
+        "model": "baseline_volatility_scaled",
+        "asset_symbol": "XAGUSD",
+        "horizon": "1h",
+        "n_predictions": 300,
+        "directional_accuracy": 0.4933,
+        "mae": 0.004711887951468867,
+        "rmse": 0.005902104955445752,
+        "mean_abs_forecast": 0.00395446879292673,
+        "hit_rate_80_interval": 0.8733333333333333,
+        "diebold_mariano_p": null
+      },
+      {
+        "model": "lightgbm",
+        "asset_symbol": "XAGUSD",
+        "horizon": "1h",
+        "n_predictions": 300,
+        "directional_accuracy": 0.5167,
+        "mae": 0.0035442810347446237,
+        "rmse": 0.004678808201315702,
+        "mean_abs_forecast": 0.001970122314322348,
+        "hit_rate_80_interval": 0.8,
+        "diebold_mariano_p": 5.8355986801927884e-05
+      },
+      {
+        "model": "xgboost",
+        "asset_symbol": "XAGUSD",
+        "horizon": "1h",
+        "n_predictions": 300,
+        "directional_accuracy": 0.54,
+        "mae": 0.0038153569782562436,
+        "rmse": 0.004991292633726203,
+        "mean_abs_forecast": 0.0023599509527351377,
+        "hit_rate_80_interval": 0.8366666666666667,
+        "diebold_mariano_p": 2.343474864607842e-06
+      },
+      {
+        "model": "garch",
+        "asset_symbol": "XAGUSD",
+        "horizon": "1h",
+        "n_predictions": 300,
+        "directional_accuracy": 0.4967,
+        "mae": 0.0030276479780680233,
+        "rmse": 0.004149642724794746,
+        "mean_abs_forecast": 1.838092694912688e-05,
+        "hit_rate_80_interval": 0.9066666666666666,
+        "diebold_mariano_p": 0.29022676313912643
+      },
+      {
+        "model": "har",
+        "asset_symbol": "XAGUSD",
+        "horizon": "1h",
+        "n_predictions": 300,
+        "directional_accuracy": null,
+        "mae": 0.003027525438555029,
+        "rmse": 0.004150766859742088,
+        "mean_abs_forecast": 0.0,
+        "hit_rate_80_interval": 0.85,
+        "diebold_mariano_p": null
+      }
+    ],
+    "adopted_models": []
+  }
+}

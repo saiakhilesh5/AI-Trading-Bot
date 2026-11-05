@@ -1,0 +1,38 @@
+# Research assets. Tradable instruments are mapped separately in execution layer.
+assets:
+  XAUUSD:
+    name: "Gold"
+    class: precious_metal
+    primary_source: goldprice_dev        # GoldPrice.dev spot
+    fallback_source: yfinance:GC=F      # COMEX front-month futures (basis risk documented)
+    trades_24h: false
+    notes: "Research reference; futures basis vs spot documented in DEVELOPMENT_STATUS.md"
+  XAGUSD:
+    name: "Silver"
+    class: precious_metal
+    primary_source: goldprice_dev
+    fallback_source: yfinance:SI=F
+    trades_24h: false
+    notes: "Research reference; futures basis vs spot documented"
+  BTCUSD:
+    name: "Bitcoin"
+    class: crypto
+    primary_source: ccxt:binance:BTC/USDT
+    fallback_source: coingecko:bitcoin
+    trades_24h: true
+    notes: "USDT/USD peg risk documented"
+  ETHUSD:
+    name: "Ethereum"
+    class: crypto
+    primary_source: ccxt:binance:ETH/USDT
+    fallback_source: coingecko:ethereum
+    trades_24h: true
+    notes: "USDT/USD peg risk documented"
+
+reference_series:
+  - symbol: DXY
+    name: "US Dollar Index"
+    source: yfinance:DX-Y.NYB
+    notes: "Feature input only; never tradable"
+
+intervals: ["1h", "4h", "1d"]

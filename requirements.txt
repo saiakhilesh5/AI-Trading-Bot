@@ -1,0 +1,60 @@
+# ===== Core =====
+pydantic>=2.6
+pydantic-settings>=2.2
+python-dotenv>=1.0
+PyYAML>=6.0
+loguru>=0.7
+httpx>=0.27
+tenacity>=8.2
+
+# ===== Data =====
+pandas>=2.2
+numpy>=1.26
+polars>=1.0
+pyarrow>=15.0
+duckdb>=1.0
+ccxt>=4.2
+yfinance>=0.2.40      # metals fallback provider
+feedparser>=6.0.10
+websockets>=12.0
+pandas-ta-classic>=0.4     # maintained fork of removed pandas-ta (same API)
+ta>=0.11
+statsmodels>=0.14
+
+# ===== Persistence =====
+sqlalchemy>=2.0
+alembic>=1.13
+psycopg2-binary>=2.9
+redis>=5.0
+
+# ===== AI / agents =====
+langchain>=0.3
+langchain-core>=0.3
+langgraph>=0.2
+langchain-openai>=0.2
+langchain-anthropic>=0.3
+langchain-google-genai>=2.0
+openai>=1.40
+
+# ===== ML / forecasting (torch stack added in forecasting milestone) =====
+scikit-learn>=1.4
+scipy>=1.12
+lightgbm>=4.3
+xgboost>=2.0
+arch>=6.3
+
+# ===== Backtesting =====
+vectorbt>=0.26
+
+# ===== Dashboard / monitoring =====
+streamlit>=1.36
+plotly>=5.22,<6      # vectorbt 0.26 incompatible with plotly 6
+mlflow>=2.14
+prometheus-client>=0.20
+
+# ===== Testing / quality =====
+pytest>=8.0
+pytest-cov>=5.0
+hypothesis>=6.100
+ruff>=0.5
+mypy>=1.10
